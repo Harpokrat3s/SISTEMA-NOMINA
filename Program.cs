@@ -44,3 +44,74 @@
         SueldoNeto = SueldoBruto - TSS - ImpuestoRenta;
     }
 }
+
+static void ReporteEmpleadosLicencia()
+        {
+            if (contadorEmpleados > 0)
+            {
+                Console.WriteLine("=== Reporte de Empleados con Licencia ===");
+
+                for (int i = 0; i < contadorEmpleados; i++)
+                {
+                    Empleado empleado = empleados[i];
+                    if (empleado.PoseeLicencia)
+                    {
+                        Console.WriteLine($"Empleado {i + 1}:");
+                        Console.WriteLine($"Nombre: {empleado.Nombre} {empleado.Apellido}");
+                        Console.WriteLine($"Sueldo bruto: {empleado.SueldoBruto:C}");
+                        Console.WriteLine();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No hay empleados registrados.");
+            }
+        }
+        static void ReporteEmpleadosMujeres()
+        {
+            if (contadorEmpleados > 0)
+            {
+                Console.WriteLine("=== Reporte de Empleados Mujeres ===");
+
+                for (int i = 0; i < contadorEmpleados; i++)
+                {
+                    Empleado empleado = empleados[i];
+                    if (empleado.Sexo == 'F')
+                    {
+                        Console.WriteLine($"Empleado {i + 1}:");
+                        Console.WriteLine($"Nombre: {empleado.Nombre} {empleado.Apellido}");
+                        Console.WriteLine($"Sueldo bruto: {empleado.SueldoBruto:C}");
+                        Console.WriteLine();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No hay empleados registrados.");
+            }
+        }
+
+        static void ReporteEmpleadosLicencia()
+        {
+            if (contadorEmpleados > 0)
+            {
+                Console.WriteLine("=== Reporte de Empleados con Licencia ===");
+
+                for (int i = 0; i < contadorEmpleados; i++)
+                {
+                    Empleado empleado = empleados[i];
+                    if (empleado.PoseeLicencia)
+                    {
+                        Console.WriteLine($"Empleado {i + 1}:");
+                        Console.WriteLine($"Nombre: {empleado.Nombre} {empleado.Apellido}");
+                        Console.WriteLine($"Sueldo bruto: {empleado.SueldoBruto:C}");
+                        Console.WriteLine();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No hay empleados registrados.");
+            }
+        }
